@@ -18,8 +18,8 @@
                     alert("Please enter your full name.");
                     return (false);
                 }
-                if ((IC.length !== 12) || !(IC.toString().match(numbers))){
-                    alert("Please enter your IC number properly.");
+                if (IC.length !== 12) {
+                    alert("Please enter your IC number properly and not more tahn 12 or less.");
                     return (false);
                 }
                 if (Address.length === 0){
@@ -35,7 +35,7 @@
     </head>
     <body>
         <h2>Malaysia Job Application</h2>
-        <form name="ApplicationForm" action="Application" method="POST">
+        <form name="ApplicationForm" action="Age" method="POST">
             <table style ="border:black solid 2px">
                 <tr>
                     <td> Full Name </td>
@@ -58,11 +58,6 @@
                     <td><input type="number" name="age"></td>
                 </tr>
                 
-                <tr>
-                    <td> Age </td>
-                    <td> : </td>
-                    <td><input type="number" name="age"></td>
-                </tr>
                 <tr>
                     <td colspan="3">
                         <input type="submit" value="Apply" onclick="return(verify())">
